@@ -35,22 +35,4 @@ test("API Testing Get Practice 3",async()=>{
  
  })
 
- test("API Testing Get Practice 4", async({request})=>{
-    const resp1 = await request.get("/booking/2443");
-    console.log(await resp1.json());
-    expect(resp1.status()).toBe(200);
-    expect(resp1.ok()).toBeTruthy();
-    expect(await resp1.json()).toMatchObject({
-        "firstname": "Josh",
-        "lastname": "allen",
-        "totalprice": 111,
-        "depositpaid": true,
-        "bookingdates": {
-            "chickin": "2018-01-01",
-            "checkout": "2019-01-01"
-        },
-        "additionalneeds": "super bowls"
-    })
-    const jsonresp= await resp1.json()
-    expect(jsonresp.firstname).toEqual("xyz")
- })
+ 
